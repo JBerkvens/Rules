@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "20.0.0"
+    defaultConfig {
+        applicationId "com.moridrin.rulesofjeroen"
+        minSdkVersion 17
+        targetSdkVersion 'L'
+        versionCode 101
+        versionName '1.1'
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.android.gms:play-services:5.2.08'
+    compile 'com.android.support:appcompat-v7:20.0.0'
+    compile 'com.android.support:support-v13:20.0.0'
+}
